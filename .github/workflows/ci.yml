@@ -30,7 +30,8 @@ jobs:
         cache-disabled: false
         cache-read-only: false
         arguments: |
-                    test
+                    build
+                    --warning-mode=all
                     
     - name: Gradle Test
       uses: gradle/gradle-build-action@v2.0.1
