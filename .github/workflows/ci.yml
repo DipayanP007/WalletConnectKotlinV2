@@ -34,6 +34,6 @@ jobs:
         cache-disabled: false
         cache-read-only: false
         arguments: |
-                    test
+                    test --debug --stacktrace --warning-mode=all
                     
     - run: ./gradlew test
