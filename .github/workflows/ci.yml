@@ -26,12 +26,10 @@ jobs:
     - name: Gradle Build Action
       uses: gradle/gradle-build-action@v2.0.1
       with:
-        gradle-executable: gradlew
         gradle-version: 7.2
-        arguments: build
         cache-disabled: false
         cache-read-only: true
     - name: Build with Gradle
-      run: ./gradlew build
-    - name: Test
-      run: ./gradlew test
+      run: ./gradlew -v
+    #- name: Test
+     # run: ./gradlew test
