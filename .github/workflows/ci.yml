@@ -20,14 +20,10 @@ jobs:
         distribution: 'adopt'
         cache: gradle
 
-    - name: Gradle Android
-      uses: Raul6469/android-gradle-action@2.0.0
-      with:
-    # The ./gradlew command arguments
-        script: build 
-    # Your Android license agreement id
-        #android-licence: # optional
+    - name: Android Builder
+      uses: b4s36t4/Android-Action@0.0.1
     - run: gradle -v
+    - run: ./gradlew test
     - name: Setup Android SDK
       uses: android-actions/setup-android@v2
 
